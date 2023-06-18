@@ -12,11 +12,11 @@ public class Cuenta {
 	}
 	public Cuenta( int agencia, int numero){
 		Cuenta.total++;
-        System.out.println("Total de cuentas es " + Cuenta.total);
+        System.out.println("Total de cuentas es: " + Cuenta.total);
         this.agencia = agencia;
         this.numero = numero;
         this.saldo = 100;
-        System.out.println("Estoy creando una cuenta" + this.numero);
+        System.out.println("Estoy creando una cuenta: " + this.numero);
 	}
 	
 	public void depositar ( double cantidadDinero){		

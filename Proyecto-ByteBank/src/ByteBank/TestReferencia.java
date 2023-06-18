@@ -12,11 +12,11 @@ public class TestReferencia {
 
 	        Cuenta segundaCuenta = primeraCuenta;
 
-	        System.out.println("saldo de segunda Cuenta: " + segundaCuenta.getSaldo());
+	        System.out.println("saldo de segunda Cuenta : " + segundaCuenta.getSaldo());
 
 	        // segundaCuenta.saldo += 100;
 	        segundaCuenta.depositar(100);
-	        System.out.println("saldo de segunda Cuenta " + segundaCuenta.getSaldo());
+	        System.out.println("saldo de segunda Cuenta:  " + segundaCuenta.getSaldo());
 
 	        System.out.println(primeraCuenta.getSaldo());
 
