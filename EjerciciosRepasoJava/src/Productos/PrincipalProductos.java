@@ -2,8 +2,6 @@ package Productos;
 
 import java.util.Scanner;
 
-import Articulos.Articulos;
-
 public class PrincipalProductos {
  public static void main(String[] args) {
 	 
