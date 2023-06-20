@@ -27,6 +27,7 @@ public class Condicional_Elif {
 	else {
 		System.out.println("No existe");
 	}
+	in.close();
 	}
 
 }
