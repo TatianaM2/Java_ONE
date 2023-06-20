@@ -21,6 +21,8 @@ public class PrincipalArticulos {
         
         Articulos articulo = new Articulos(Nombre,Marca,precioUnitario,cantidadStock);
         articulo.informacionArticulos();
+        
+        Articulo.close();
 	}
 
 }
