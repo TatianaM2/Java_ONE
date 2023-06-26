@@ -35,21 +35,9 @@ public class Funcionario {
 		this.tipo = tipo;
 	}
 	
-	public double getBonificacion() {
-		 // 0: Gerente
-		 // 1: Funcionario
-		 
-		 if (this.tipo==0) {
-			 return this.salario;
-		 }
-		 else if(this.tipo==1) {
-			 return this.salario*0.10;
-		 }
-		 else{
-			 return 0;
-		 }
-		 }
-		 
+	public double getBonificacion() {		
+		return this.salario*0.10;
 	
+	}
 	
 }
