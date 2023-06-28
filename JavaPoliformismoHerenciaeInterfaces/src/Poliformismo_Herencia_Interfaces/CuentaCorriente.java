@@ -17,4 +17,10 @@ public class CuentaCorriente extends Cuenta {
 		// TODO Auto-generated method stub
 		//super.depositar(cantidadDinero);
 	//}
+
+	@Override
+	public void depositar(double cantidadDinero) {
+		this.saldo+=cantidadDinero;	
+		
+	}
 }

@@ -3,7 +3,7 @@ package Poliformismo_Herencia_Interfaces;
 public class TestFuncionario {
 	public static void main(String[] args) {
 		
-		Funcionario Tatiana= new Funcionario();
+		Funcionario Tatiana= new Contador();
 		Tatiana.setNombre("Tatiana Martinez");
 		Tatiana.setDocumento("123456");
 		Tatiana.setSalario(116000);

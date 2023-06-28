@@ -1,12 +1,15 @@
 package Poliformismo_Herencia_Interfaces;
 
-public class Cuenta {
+public  abstract class Cuenta {
 	protected double saldo;
 	private int agencia=1;
 	private int numero;
 	private Cliente titular=new Cliente();	
 	private static 	int total=0;
 	
+	public Cuenta () {
+		
+	}
 	
 	public Cuenta( int agencia, int numero){        
         this.agencia = agencia;
@@ -16,10 +19,10 @@ public class Cuenta {
         System.out.println("Total de cuentas es: " + Cuenta.total);
 	}
 	
-	public void depositar ( double cantidadDinero){		
-		this.saldo+=cantidadDinero;		
+	public  abstract void depositar ( double cantidadDinero);		
+			
 		
-	}
+	
 	public boolean retirar (double cantidadDinero){
 		if(this.saldo>=cantidadDinero) {
 			this.saldo-=cantidadDinero;
