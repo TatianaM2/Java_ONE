@@ -1,7 +1,7 @@
 package Poliformismo_Herencia_Interfaces;
 
 public class Cuenta {
-	private double saldo;
+	protected double saldo;
 	private int agencia=1;
 	private int numero;
 	private Cliente titular=new Cliente();	
@@ -25,17 +25,20 @@ public class Cuenta {
 			this.saldo-=cantidadDinero;
 			return true;
 			
-		}
-		return false;		
+		}else {
+            return false;
+        }		
 	}
 	
 	public boolean transferir (double cantidadDinero, Cuenta cuenta){
-		 if(this.saldo> cantidadDinero) {
-			 this.saldo-= cantidadDinero;
+		 if(this.saldo>=cantidadDinero) {
+			 this.retirar(cantidadDinero);
 			 cuenta.depositar(cantidadDinero);
 			 return true;			 
 		 } 
-		 return false;	
+		 else {
+	            return false;
+	        }
 		
 	}
 	public double getSaldo() {
@@ -48,8 +51,9 @@ public class Cuenta {
 		 if(numero <= 0) {
 	            System.out.println("No pueder ser el valor menor o igual a 0");
 	            return;
-	        }
+	        }else {
 	        this.numero = numero;
+	}
 	}
 	 		
 	public int getAgencia() {
@@ -59,9 +63,10 @@ public class Cuenta {
 		if(agencia <= 0) {
             System.out.println("No pueder ser el valor menor o igual a ");
             return;
-        }
+        }else {
         this.agencia = agencia;
 }
+	}
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
 	}
