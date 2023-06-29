@@ -1,13 +1,11 @@
 package Poliformismo_Herencia_Interfaces;
 
-public class Gerente extends Funcionario implements Autenticable {
+public class Administrador extends Funcionario implements Autenticable {
 
-
- 
-	
+	@Override
 	public double getBonificacion() {
-		System.out.println("EJECUTANDO DESDE GERENTE");
-		return 2000;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
@@ -20,5 +18,5 @@ public class Gerente extends Funcionario implements Autenticable {
 	public boolean iniciarSesion(String contrasena) {
 		return contrasena=="AluraCursos";
 	}
-		 
+
 }

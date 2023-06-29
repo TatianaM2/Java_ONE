@@ -1,6 +1,6 @@
 package Poliformismo_Herencia_Interfaces;
 
-public class Cliente {
+public class Cliente implements  Autenticable {
 	private String nombre;
 	private String documento;
 	private String telefono;
@@ -30,5 +30,15 @@ public class Cliente {
 	}
 	public void setProfesion(String profesion) {
 		this.profesion = profesion;
+	}
+	
+	@Override
+	public void setContrasena(String contrasena) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public boolean iniciarSesion(String contrasena) {
+		return contrasena=="AluraCursos";
 	}
 }
