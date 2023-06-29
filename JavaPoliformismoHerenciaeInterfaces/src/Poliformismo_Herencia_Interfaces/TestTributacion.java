@@ -6,7 +6,6 @@ public class TestTributacion {
         cc.depositar(100.0);
 
         SeguroDeVida seguro = new SeguroDeVida();
-
         CalculadoraDeImpuesto calc = new CalculadoraDeImpuesto();
 
         calc.registra(cc);
