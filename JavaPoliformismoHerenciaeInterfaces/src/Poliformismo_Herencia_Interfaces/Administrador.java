@@ -1,22 +1,26 @@
 package Poliformismo_Herencia_Interfaces;
 
 public class Administrador extends Funcionario implements Autenticable {
+	private AutenticacionUtil util;
 
+	public Administrador() {
+		this.util=new AutenticacionUtil();
+	}
+	
 	@Override
 	public double getBonificacion() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.getSalario();
 	}
 
 	@Override
 	public void setContrasena(String contrasena) {
-		// TODO Auto-generated method stub
+		this.setContrasena(contrasena);
 		
 	}
-
 	@Override
-	public boolean iniciarSesion(String contrasena) {
-		return contrasena=="AluraCursos";
-	}
+	public boolean iniciarSesion(String contrasena) {		
+		return this.util.iniciarSesion(contrasena);
+ 
+}
 
 }

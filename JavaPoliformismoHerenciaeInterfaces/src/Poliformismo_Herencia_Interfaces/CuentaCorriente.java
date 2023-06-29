@@ -1,6 +1,6 @@
 package Poliformismo_Herencia_Interfaces;
 
-public class CuentaCorriente extends Cuenta {
+public class CuentaCorriente extends Cuenta implements Tributacion  {
 
 	public CuentaCorriente(int agencia, int numero) {
 		super(agencia, numero);
@@ -18,5 +18,10 @@ public class CuentaCorriente extends Cuenta {
 	public void depositar(double cantidadDinero) {
 		this.saldo+=cantidadDinero;	
 		
+	}
+
+	@Override
+	public double getValorImpuesto() {
+		return super.saldo * 0.01;
 	}
 }

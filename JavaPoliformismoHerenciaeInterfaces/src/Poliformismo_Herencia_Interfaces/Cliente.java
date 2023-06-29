@@ -5,8 +5,12 @@ public class Cliente implements  Autenticable {
 	private String documento;
 	private String telefono;
 	private String profesion;
+	private String contrasena;
+	private AutenticacionUtil util;
 	
-	
+	public Cliente() {
+		this.util= new AutenticacionUtil();
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -34,11 +38,12 @@ public class Cliente implements  Autenticable {
 	
 	@Override
 	public void setContrasena(String contrasena) {
-		// TODO Auto-generated method stub
+		this.setContrasena(contrasena);
 		
 	}
 	@Override
-	public boolean iniciarSesion(String contrasena) {
-		return contrasena=="AluraCursos";
-	}
+	public boolean iniciarSesion(String contrasena) {		
+		return this.util.iniciarSesion(contrasena);
+ 
+}
 }
