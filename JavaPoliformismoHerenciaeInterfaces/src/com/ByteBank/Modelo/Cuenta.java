@@ -1,5 +1,11 @@
 package com.ByteBank.Modelo;
 
+/**
+ * Cuenta va a crear instacias de Cuenta Corriente
+ * @version 1.0
+ * @author Tatiana Martinez
+ *
+ */
 public  abstract class Cuenta {
 	protected double saldo;
 	private int agencia=1;
@@ -7,9 +13,17 @@ public  abstract class Cuenta {
 	private Cliente titular=new Cliente();	
 	private static 	int total=0;
 	
+	/**
+	 * Instancia una nueva cuenta sin parametros
+	 */
 	public Cuenta () {
 		
 	}
+	/**
+	 * Instancia una nueva cuenta usando agencia y numero
+	 * @param agencia
+	 * @param numero
+	 */
 	
 	public Cuenta( int agencia, int numero){        
         this.agencia = agencia;
@@ -22,7 +36,11 @@ public  abstract class Cuenta {
 	public  abstract void depositar ( double cantidadDinero);		
 			
 		
-	
+	/**
+	 * Este metodo retira dinero y si ocurre un error devuelve una excepcion 
+	 * @param cantidadDinero
+	 * @throws SaldoInsuficienteException
+	 */
 	public void retirar (double cantidadDinero) throws SaldoInsuficienteException{
 		if(this.saldo<cantidadDinero) {
 			throw new SaldoInsuficienteException("Saldo insuficiente.");
