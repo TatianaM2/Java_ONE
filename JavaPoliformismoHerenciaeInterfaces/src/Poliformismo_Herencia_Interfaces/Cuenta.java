@@ -23,19 +23,23 @@ public  abstract class Cuenta {
 			
 		
 	
-	public boolean retirar (double cantidadDinero){
-		if(this.saldo>=cantidadDinero) {
+	public void retirar (double cantidadDinero) throws SaldoInsuficienteException{
+		if(this.saldo<cantidadDinero) {
+			throw new SaldoInsuficienteException("Saldo insuficiente.");
+		}
 			this.saldo-=cantidadDinero;
-			return true;
-			
-		}else {
-            return false;
-        }		
+		
+        	
 	}
 	
 	public boolean transferir (double cantidadDinero, Cuenta cuenta){
 		 if(this.saldo>=cantidadDinero) {
-			 this.retirar(cantidadDinero);
+			 try {
+				this.retirar(cantidadDinero);
+			} catch (SaldoInsuficienteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			 cuenta.depositar(cantidadDinero);
 			 return true;			 
 		 } 

@@ -2,16 +2,17 @@ package Poliformismo_Herencia_Interfaces;
 
 public class TestCuenta {
 
-	public static void main(String[] args) {
-		
-		CuentaCorriente cc = new CuentaCorriente(1, 1);
-		CuentaAhorros ca = new CuentaAhorros(2, 3);
-		cc.depositar(2000);
-		cc.transferir(1000, ca);
-		
-		System.out.println(cc.getSaldo());
-		System.out.println(ca.getSaldo());
+	public static void main(String[] args) throws SaldoInsuficienteException{
 
-	}
+        CuentaCorriente cc = new CuentaCorriente (111, 111);
+        cc.depositar(100.0);
 
+        CuentaAhorros ca = new CuentaAhorros(222, 222);
+        ca.depositar(200.0);
+
+        cc.transferir(110.0, ca);
+
+        System.out.println("CC: " + cc.getSaldo());
+        System.out.println("CA: " + ca.getSaldo());
+    }
 }
