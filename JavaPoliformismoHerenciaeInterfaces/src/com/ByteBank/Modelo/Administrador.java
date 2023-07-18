@@ -1,4 +1,4 @@
-package Poliformismo_Herencia_Interfaces;
+package com.ByteBank.Modelo;
 
 public class Administrador extends Funcionario implements Autenticable {
 	private AutenticacionUtil util;

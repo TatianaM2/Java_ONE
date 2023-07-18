@@ -1,5 +1,5 @@
-package Poliformismo_Herencia_Interfaces;
-
+package com.ByteBank.Test;
+import com.ByteBank.Modelo.*;
 public class TestGerente {
 	public static void main(String[] args) {
 		Gerente TatianaM=new Gerente();

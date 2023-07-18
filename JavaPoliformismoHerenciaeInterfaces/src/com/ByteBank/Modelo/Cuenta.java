@@ -1,4 +1,4 @@
-package Poliformismo_Herencia_Interfaces;
+package com.ByteBank.Modelo;
 
 public  abstract class Cuenta {
 	protected double saldo;

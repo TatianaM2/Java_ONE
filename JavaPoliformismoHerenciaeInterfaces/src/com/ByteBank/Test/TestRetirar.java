@@ -1,4 +1,5 @@
-package Poliformismo_Herencia_Interfaces;
+package com.ByteBank.Test;
+import com.ByteBank.Modelo.*;
 
 public class TestRetirar {
 	  public static void main(String[] args) {
