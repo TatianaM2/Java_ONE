@@ -1,18 +1,19 @@
 package com.ByteBank.Test;
+
 import com.ByteBank.Modelo.*;
 
 public class TestTributacion {
 	public static void main(String[] args) {
-        CuentaCorriente cc = new CuentaCorriente(222, 333);
-        cc.depositar(100.0);
+		CuentaCorriente cc = new CuentaCorriente(222, 333);
+		cc.depositar(100.0);
 
-        SeguroDeVida seguro = new SeguroDeVida();
-        CalculadoraDeImpuesto calc = new CalculadoraDeImpuesto();
+		SeguroDeVida seguro = new SeguroDeVida();
+		CalculadoraDeImpuesto calc = new CalculadoraDeImpuesto();
 
-        calc.registra(cc);
-        calc.registra(seguro);
+		calc.registra(cc);
+		calc.registra(seguro);
 
-        System.out.println(calc.getTotalImpuesto());
-    }
+		System.out.println(calc.getTotalImpuesto());
+	}
 
 }

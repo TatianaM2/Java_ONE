@@ -1,23 +1,22 @@
 package com.ByteBank.Modelo;
 
-public class CuentaCorriente extends Cuenta implements Tributacion  {
+public class CuentaCorriente extends Cuenta implements Tributacion {
 
 	public CuentaCorriente(int agencia, int numero) {
 		super(agencia, numero);
-		
+
 	}
-	
+
 	@Override
 	public void retirar(double cantidadDinero) throws SaldoInsuficienteException {
-		double comision=0.2;
-	    super.retirar(cantidadDinero+(comision));
-}
-	
+		double comision = 0.2;
+		super.retirar(cantidadDinero + (comision));
+	}
 
 	@Override
 	public void depositar(double cantidadDinero) {
-		this.saldo+=cantidadDinero;	
-		
+		this.saldo += cantidadDinero;
+
 	}
 
 	@Override

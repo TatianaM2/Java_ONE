@@ -1,4 +1,5 @@
 package com.ByteBank.Test;
+
 import com.ByteBank.Modelo.*;
 
 public class TestCuentaException {
@@ -11,8 +12,7 @@ public class TestCuentaException {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
-	
 
 }

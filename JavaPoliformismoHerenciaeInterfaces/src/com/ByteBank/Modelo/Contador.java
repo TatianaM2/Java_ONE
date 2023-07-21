@@ -3,15 +3,15 @@ package com.ByteBank.Modelo;
 public class Contador extends Funcionario {
 	private String usuario;
 	private String contrasena;
-	
-	
+
 	public void setUsuario(String usuario) {
-		this.usuario=usuario;				
+		this.usuario = usuario;
 	}
+
 	public String getUsuario() {
 		return usuario;
 	}
-	
+
 	public String getContrasena() {
 		return contrasena;
 	}
@@ -20,17 +20,13 @@ public class Contador extends Funcionario {
 		this.contrasena = contrasena;
 	}
 
-
 	public boolean iniciarSesion(String contrasena) {
-		return contrasena=="AluraCursos";
-		
-		
+		return contrasena == "AluraCursos";
+
 	}
-	
-	
-		
-		public double getBonificacion() {
-			System.out.println("EJECUTANDO DESDE CONTADOR");
-			return 200;
-				}
+
+	public double getBonificacion() {
+		System.out.println("EJECUTANDO DESDE CONTADOR");
+		return 200;
+	}
 }
